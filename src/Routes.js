@@ -7,13 +7,22 @@ import {
 } from 'react-router-dom'
 
 import App from './App';
+import Creatingpoll from './Creatingpoll';
+import Header from './Header';
+
+import CreateBrowserHistory from 'history/createBrowserHistory';
+const customHistory = CreateBrowserHistory();
+
 
 
 
 const MyRoutes = () => (
-    <Router>
+    <Router history = {customHistory}>
         <div>
-            <Route path="/" component={App} />
+            <Header/>
+            <Route exact path="/" component={App} />
+            <Route  path="/creatingpoll" component={Creatingpoll} />
+
         </div>
     </Router>
 
