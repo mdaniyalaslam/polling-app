@@ -8,6 +8,7 @@ import {
 
 import App from './App';
 import Creatingpoll from './Creatingpoll';
+import Signup from './Signup';
 import Header from './Header';
 
 import CreateBrowserHistory from 'history/createBrowserHistory';
@@ -22,6 +23,8 @@ const MyRoutes = () => (
             <Header/>
             <Route exact path="/" component={App} />
             <Route  path="/creatingpoll" component={Creatingpoll} />
+            <Route  path="/signup" component={Signup} />
+
 
         </div>
     </Router>
